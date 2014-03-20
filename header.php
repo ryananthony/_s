@@ -14,7 +14,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 </head>
 
@@ -24,15 +25,14 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
-
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
-
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
+		<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 	</header><!-- #masthead -->
+
 
 	<div id="content" class="site-content">
