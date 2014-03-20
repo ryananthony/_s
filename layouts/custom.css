@@ -7,16 +7,15 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
 }
 
-h1 {font-size: 2.4em;}
-h2 {font-size: 2.1em;}
-h3 {font-size: 1.8em;}
-h4 {font-size: 1.5em;}
-h5 {font-size: 1.4em;}
-h6 {font-size: 1.3em;}
+h1 {font-size: 2.1em; text-shadow: 1px 0px 0px #ed0000;}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.3em;}
+h5 {font-size: 1.2em;}
+h6 {font-size: 1.1em;}
 
 a {
   text-decoration: none;
@@ -31,10 +30,53 @@ a:hover {
   transition: color 0.6s ease;
 }
 
+textarea, 
+input[type="search"] {
+  background-color: #e4ebab;
+  padding: 20px;
+  font-size: 0.6em;
+  border: none;
+}
+
+input[type="search"] {
+  padding: 10px; 
+}
+
+input[type="submit"] {
+  background-color: #eb412e;
+  border: none;
+  font-size: 0.7em;
+  box-shadow: none;
+  color: #e4ebab;
+  text-shadow: 1px 0px 0px #1c1c1c;
+}
+input[type="submit"]:hover {
+  box-shadow: none;
+  background-color: #ff5533;
+}
+
 body {
   background-color: #151a19;
   min-width: 480px;
 }
+
+/*  *********************************
+    Modules contained separately so
+    we can do some full-width things
+    around the content.
+  ********************************* */
+
+.site-header,
+.entry-header,
+.site-main .post-navigation,
+.comments-area,
+.widget-area,
+.site-footer {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* sections */
 
 .site {
   font-family: 'Open Sans Condensed', sans-serif;
@@ -42,9 +84,13 @@ body {
   color: #e4ebab;
 }
 
+.header-wrap {
+  background-color: #1c1c1c;
+  border-bottom: 2px solid #2a2e21;
+}
+
 .site-header {
-  max-width: 1140px;
-  margin: 0 auto;
+  height: 160px;
   padding: 0 20px;
 }
 
@@ -60,11 +106,9 @@ body {
   height: 100%;
   clear: none;
   height: 90px;
-  padding: 10px;
 }
 
 .main-navigation .menu-item {
-  background-color: #eb412e;
   padding-left: 10px;
 }
 .main-navigation .menu-item:first-child {
@@ -72,24 +116,31 @@ body {
 }
 
 .main-navigation a {
-  color: #e4ebab;
+  color: #eb412e;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.post {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
+.main-navigation a:hover {
+  cursor:pointer;
 }
 
-.full-width-wrap+.full-width-wrap {
-  border-top: 1px solid #e4ebab;
+.hentry {
+  padding: 40px 20px 0;
+}
+
+.content-wrap+.content-wrap {
+  border-top: 2px solid #2a2e21;
   padding: 70px 0;
 }
-.full-width-wrap:first-child+.full-width-wrap {
+.content-wrap:first-child+.content-wrap {
   margin-top: 70px;
+}
+.footer-wrap {
+  background-color: #1c1c1c;
+  padding: 40px 0;
+  border-top: 2px solid #2a2e21;  
 }
 
 .entry-header, .entry-footer {
@@ -97,20 +148,31 @@ body {
 }
 
 .entry-content {
-  max-width: 720px;
+  padding: 40px 40px 20px;
+  background-color: #152421;
+  box-shadow: 3px 5px 7px #134037;
+  max-width: 800px;
   margin: 20px auto 0;
 }
 
+.entry-footer {
+  padding-top: 20px;
+}
+
+.post-navigation {
+  padding: 0 20px;
+}
+
+.comments-area {
+  padding: 0 20px;
+}
+
 .widget-area {
-  max-width: 1140px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
 .site-footer {
   text-align: center;
-  max-width: 1140px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
