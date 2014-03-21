@@ -21,18 +21,21 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-<div class="header-wrap">
+<div class="header-wrap clear">
 	<header id="masthead" class="site-header" role="banner">
+		<img src="/wp-content/themes/flannel_s/img/fl-logo-tiny.png" alt="FLANNEL F.L. Logo">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 		</div>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+	</header><!-- #masthead -->
+	<div class="nav-wrap clear">
+		<nav id="site-navigation" class="main-navigation clear" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
-		<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
-	</header><!-- #masthead -->
+	</div>
 </div>
 
 	<div id="content" class="site-content">

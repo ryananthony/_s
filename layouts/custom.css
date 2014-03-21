@@ -8,11 +8,12 @@ h5,
 h6 {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: -2px;
+  color: #ddd;
 }
 
-h1 {font-size: 2.1em; text-shadow: 1px 0px 0px #ed0000;}
-h2 {font-size: 1.8em;}
-h3 {font-size: 1.5em;}
+h1 {font-size: 2.0em; text-shadow: 1px 0px 0px #222;}
+h2 {font-size: 1.7em;}
+h3 {font-size: 1.4em;}
 h4 {font-size: 1.3em;}
 h5 {font-size: 1.2em;}
 h6 {font-size: 1.1em;}
@@ -22,42 +23,41 @@ a {
 }
 
 a,a:visited {
-  color: #eb412e;
+  color: #b6c795;
 }
 
 a:hover {
-  color: #ff5533;
+  color: #e4ebab;
   transition: color 0.6s ease;
 }
 
 textarea, 
+input[type="text"], 
+input[type="email"], 
+input[type="url"], 
+input[type="password"], 
 input[type="search"] {
+  padding: 10px;
   background-color: #e4ebab;
-  padding: 20px;
   font-size: 0.6em;
   border: none;
 }
 
-input[type="search"] {
-  padding: 10px; 
-}
-
 input[type="submit"] {
-  background-color: #eb412e;
+  background-color: #4E7529;
   border: none;
   font-size: 0.7em;
   box-shadow: none;
-  color: #e4ebab;
+  color: #ddd;
   text-shadow: 1px 0px 0px #1c1c1c;
 }
 input[type="submit"]:hover {
   box-shadow: none;
-  background-color: #ff5533;
+  background-color: #3c5c1d;
 }
 
 body {
-  background-color: #151a19;
-  min-width: 480px;
+
 }
 
 /*  *********************************
@@ -67,7 +67,9 @@ body {
   ********************************* */
 
 .site-header,
+.main-navigation,
 .entry-header,
+.entry-content,
 .site-main .post-navigation,
 .comments-area,
 .widget-area,
@@ -80,31 +82,53 @@ body {
 
 .site {
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 1.8em;
-  color: #e4ebab;
+  font-size: 1.6em;
+  color: #dbe8c1;
+  background: url(/wp-content/themes/flannel_s/img/trans-photos.png) fixed center 100px no-repeat #020801;
+  min-width: 320px;
 }
 
 .header-wrap {
-  background-color: #1c1c1c;
-  border-bottom: 2px solid #2a2e21;
+  background-color: #020801;
+  position: relative;
+  box-shadow: 0px 1px 20px 10px #000;
 }
 
 .site-header {
-  height: 160px;
-  padding: 0 20px;
+  padding: 20px 0;
+  min-height: 100px;
+}
+
+.site-header img {
+  float: left;
+  display: block;
 }
 
 .site-branding {
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.site-title {
   float:left;
-  width: 30%;
+  clear:none;
+  font-size: 50px;
+  line-height: 1.3;
+}
+
+.site-description {
+  line-height: 1.0;
+  font-size: 26px;
+}
+
+.nav-wrap {
+  border-top: 4px solid #111;
+  border-bottom: 10px solid #2a2e21;
+  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #1c1c1c;
 }
 
 .main-navigation {
-  float: right;
-  text-align: right;
-  max-width: 500px;
-  height: 100%;
-  clear: none;
+  float: none;
   height: 90px;
 }
 
@@ -116,54 +140,60 @@ body {
 }
 
 .main-navigation a {
-  color: #eb412e;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
+  color: #b6c795;
+  font-size: 30px;
   text-transform: uppercase;
+  padding: 28px 10px 0;
+  margin-right: 20px;
+  border-bottom: 30px solid transparent;
 }
 
 .main-navigation a:hover {
   cursor:pointer;
-}
-
-.hentry {
-  padding: 40px 20px 0;
+  border-bottom: 4px solid #b6c795;
+  transition: border-bottom 0.7s ease;
 }
 
 .content-wrap+.content-wrap {
-  border-top: 2px solid #2a2e21;
+  border-top: 1px solid #2a2e21;
+}
+.content-wrap {
   padding: 70px 0;
-}
-.content-wrap:first-child+.content-wrap {
-  margin-top: 70px;
-}
-.footer-wrap {
-  background-color: #1c1c1c;
-  padding: 40px 0;
-  border-top: 2px solid #2a2e21;  
 }
 
 .entry-header, .entry-footer {
   text-align: center;
 }
 
-.entry-content {
-  padding: 40px 40px 20px;
-  background-color: #152421;
-  box-shadow: 3px 5px 7px #134037;
-  max-width: 800px;
-  margin: 20px auto 0;
-}
-
-.entry-footer {
+.entry-title {
   padding-top: 20px;
 }
 
-.post-navigation {
-  padding: 0 20px;
+.entry-meta, .entry-footer {
+  max-width: 600px;
+  margin: 10px auto 0;
+  background-color: #040505;
 }
 
-.comments-area {
+.entry-content, .comments-area, .widget-area {
+  padding: 40px 70px 20px;
+  margin: 20px auto 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.entry-content {
+  border-top: 10px solid #2a2e21;
+  border-bottom: 20px solid #2a2e21;
+  border-radius: 0 0 10px 10px;
+  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #1c1c1c;
+}
+
+.comments-area, .widget-area {
+  background-color: #111;
+}
+
+
+.post-navigation {
   padding: 0 20px;
 }
 
@@ -171,8 +201,33 @@ body {
   padding: 0 20px;
 }
 
+.widget-area {
+  font-size: 0.7em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-wrap {
+  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #1c1c1c;
+  padding: 40px 0 20px;
+  border-top: 10px solid #2a2e21;  
+}
+
+
 .site-footer {
   text-align: center;
   padding: 0 20px;
 }
 
+.site-info {
+  font-size: 0.6em;
+  font-weight: bold;
+}
+
+.site-info li {
+  display: inline-block;
+}
+
+@media screen and (max-width: 800px) { 
+
+
+}
