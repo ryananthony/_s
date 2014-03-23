@@ -5,20 +5,21 @@
  * @package _s
  */
 ?>
+<div class="content-wrap">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
+			<h2 class="entry-title"><?php the_title(); ?></h2>
+		</header><!-- .entry-header -->
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h2 class="entry-title"><?php the_title(); ?></h2>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
-</article><!-- #post-## -->
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+		<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
+	</article><!-- #post-## -->
+</div>
