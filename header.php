@@ -23,7 +23,7 @@
 <div id="page" class="hfeed site">
 <div class="header-wrap clear">
 	<header id="masthead" class="site-header" role="banner">
-		<img src="/wp-content/themes/flannel_s/img/fl-logo-tiny.png" alt="FLANNEL F.L. Logo">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="/wp-content/themes/flannel_s/img/fl-logo-tiny.png" alt="FLANNEL F.L. Logo"></a>
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>

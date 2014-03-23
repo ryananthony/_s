@@ -50,7 +50,7 @@ input[type="submit"] {
   font-size: 0.7em;
   box-shadow: none;
   color: #ddd;
-  text-shadow: 1px 0px 0px #1c1c1c;
+  text-shadow: 1px 0px 0px #010d0d;
 }
 button:hover,
 input[type="submit"]:hover {
@@ -59,7 +59,9 @@ input[type="submit"]:hover {
 }
 
 body {
-
+  background:
+    url(/wp-content/themes/flannel_s/img/buffalo-behind.png) center bottom 230px no-repeat,
+    url(/wp-content/themes/flannel_s/img/teal-grunge.png) repeat #072626;
 }
 
 /*  *********************************
@@ -86,14 +88,10 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1.6em;
   color: #dbe8c1;
-  background: 
-    url(/wp-content/themes/flannel_s/img/buffalo-behind.png) fixed center bottom no-repeat,
-    url(/wp-content/themes/flannel_s/img/lime-grunge.png);
   min-width: 400px;
 }
 
 .header-wrap {
-  background-color: #020801;
   position: relative;
   box-shadow: 0px 1px 20px 10px #000;
 }
@@ -126,13 +124,24 @@ body {
 }
 
 .nav-wrap {
-  border-top: 4px solid #111;
+  border-top: 6px solid #010d0d;
   border-bottom: 10px solid #2a2e21;
-  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #1c1c1c;
+  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #010d0d;
 }
 
 .nav-img {
   display: none;
+  float: left;
+  zoom: 1;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  line-height: 300px;
+}
+
+.nav-img img {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .main-navigation {
@@ -170,10 +179,6 @@ body {
   position: relative;
 }
 
-.main-navigation .menu-item-has-children > a:hover {
-  background-color: #1c1c1c;
-}
-
 .main-navigation .menu-item-has-children > a:before {
   content: '';
   position: absolute;
@@ -188,7 +193,7 @@ body {
 }
 
 .main-navigation .menu-item-has-children ul {
-  background-color: #1c1c1c;
+  background-color: #010d0d;
   border-top: 10px solid #2a2e21;
   box-shadow: 9px 6px 6px #020801;
   top: 84px;
@@ -200,7 +205,7 @@ body {
 }
 
 .main-navigation .menu-item-has-children ul a:hover {
-  color: #1c1c1c;
+  color: #010d0d;
   background-color: #b6c795;
 }
 
@@ -229,7 +234,7 @@ body {
 
 
 .content-wrap+.content-wrap {
-  border-top: 1px solid #2a2e21;
+  border-top: 1px solid #666;
 }
 .content-wrap {
   padding: 70px 0;
@@ -249,7 +254,7 @@ body {
   background-color: #040505;
 }
 
-.entry-content, .comments-area, .widget-area {
+.entry-content, .comments-area {
   padding: 40px 200px 20px;
   margin: 20px auto 0;
   border-radius: 0 0 10px 10px;
@@ -259,10 +264,10 @@ body {
   border-top: 10px solid #2a2e21;
   border-bottom: 20px solid #2a2e21;
   border-radius: 0 0 10px 10px;
-  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #1c1c1c;
+  background: url(/wp-content/themes/flannel_s/img/bass-skate.png) right bottom no-repeat #010d0d;
 }
 
-.comments-area, .widget-area {
+.comments-area {
   background-color: #111;
 }
 
@@ -272,27 +277,47 @@ body {
 }
 
 .widget-area {
+  margin-top: 70px;
   font-size: 0.5em;
   font-family: 'Open Sans', sans-serif;
+  width: 760px;
 }
 
-.widget-area h4 {
+.widget-area h3 {
   letter-spacing: -1px;
 }
 
 .widget-area input[type="search"] {
-  font-size: 1.9em;
-  width: 97%;
+  font-size: 1.6em;
   text-align: center;
   display: block;
-  margin: 0 auto;
+  position: relative;
+  margin-top: 8px;
+}
+
+.widget {
+  float:left;
+  width: 50%;
+  padding-left: 40px;
+}
+
+.widget:first-child,
+.widget:first-child+.widget+.widget,
+.widget:first-child+.widget+.widget+.widget+.widget {
+  clear:both;
+  padding-left: 0;
+}
+
+.widget li {
+  list-style: none;
+  margin-left: -37px;
 }
 
 .footer-wrap {
-  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #1c1c1c;
+  background: url(/wp-content/themes/flannel_s/img/flannel.png) right bottom repeat #010d0d;
   padding: 40px 0 20px;
   border-top: 10px solid #2a2e21;
-  margin-top: 70px; 
+  margin-top: 700px; 
 }
 
 
@@ -310,6 +335,8 @@ body {
   display: inline-block;
 }
 
+/* tablet/phone breaking point */
+
 @media screen and (max-width: 900px) { 
 
   .site-title,
@@ -323,15 +350,6 @@ body {
   }
 
   .nav-img {
-    display: block;
-    float: left;
-    width: 50%;
-    zoom: 1;
-    filter: alpha(opacity=30);
-    opacity: 0.3;
-  }
-
-  .nav-img img {
     display: block;
   }
 
@@ -350,7 +368,7 @@ body {
   }
 
   .main-navigation a:hover {
-    color: #1c1c1c;
+    color: #010d0d;
     background-color: #b6c795;
     border-radius: 0;
   }
@@ -371,12 +389,12 @@ body {
   .main-navigation .menu-item-has-children > a:after {
     content: '';
     position: absolute;
-    top: 20px;
+    top: 31px;
     right: 0;
     width: 0; 
     height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
     border-left:10px solid #ddd; 
   }
 
@@ -399,6 +417,31 @@ body {
   .entry-content, .comments-area, .widget-area {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .entry-content {
+    background-image: none;
+  }
+
+  .widget-area {
+    width: auto;
+    font-size: 0.8em;
+  }
+
+  .widget,
+  .widget:first-child,
+  .widget:first-child+.widget+.widget,
+  .widget:first-child+.widget+.widget+.widget+.widget {
+    float: none;
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .widget-area input[type="search"] {
+    width: 100%;
+    -webkit-box-sizing: content-box; 
+    -moz-box-sizing: content-box;    
+    box-sizing: content-box; 
   }
 
 }
