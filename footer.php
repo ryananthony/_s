@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package _s
+ * @package flannel_s
  */
 ?>
 
@@ -15,8 +15,8 @@
         <ul>
           <li>
             <a href="https://github.com/ryananthony/flannel_s"><img src="/wp-content/themes/flannel_s/img/fl-logo-tiny.png" alt="FLANNEL F.L. Logo"></a>
-            <br><?php printf( __( 'Theme: %1$s by %2$s.', '_s' ), '"Rocking Flannel"', '<a href="http://www.ryananthonyrichardson.com/" rel="designer">Ryan</a>' ); ?>
-            <br><a href="<?php echo esc_url( __( 'http://underscores.me/', '_s' ) ); ?>">
+            <br><?php printf( __( 'Theme: %1$s by %2$s.', 'flannel_s' ), '"Rocking Flannel"', '<a href="http://www.ryananthonyrichardson.com/" rel="designer">Ryan</a>' ); ?>
+            <br><a href="<?php echo esc_url( __( 'http://underscores.me/', 'flannel_s' ) ); ?>">
               <?php printf( __( 'Built from the ground up with a nice head start from %s', '_s' ), '_s' ); ?>
             </a>
           </li>

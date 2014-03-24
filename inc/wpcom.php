@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package _s
+ * @package flannel_s
  */
 
 /**
@@ -13,7 +13,7 @@
  * @global array $themecolors
  * @return void
  */
-function _s_wpcom_setup() {
+function flannel_s_wpcomflannel_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -27,4 +27,4 @@ function _s_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', '_s_wpcom_setup' );
+add_action( 'afterflannel_setup_theme', 'flannel_s_wpcomflannel_setup' );

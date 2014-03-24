@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package _s
+ * @package flannel_s
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -16,6 +16,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" type="image/x-icon" href="/wp-content/themes/flannel_s/img/favicon.ico" >
 <?php wp_head(); ?>
 </head>
 
@@ -31,8 +32,8 @@
 	</header><!-- #masthead -->
 	<div class="nav-wrap clear">
 		<nav id="site-navigation" class="main-navigation clear" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'flannel_s' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'flannel_s' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 		<div class="nav-img">

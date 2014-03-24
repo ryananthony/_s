@@ -4,7 +4,7 @@
  *
  * This is the template that displays all covers by default.
  *
- * @package _s
+ * @package flannel_s
  */
 
 get_header(); ?>
@@ -12,20 +12,24 @@ get_header(); ?>
   <div id="primary" class="content-area content-wrap">
     <main id="main" class="site-main" role="main">
       <div class="entry-header">
-        <h3 class="entry-title">The Really Really Long Set List</h3>
+        <h3 class="entry-title">The Really Long Set List</h3>
       </div>
       <div class="covers-list">
         <table> <!-- todo, add if_have_posts conditional -->
+          <th>Artist</th>
+          <th>Song Title</th>
+          <th>Album</th>
+          <th>Released</th>
           <?php query_posts(array('post_type'=>'cover')); ?>
 
           <?php while ( have_posts() ) : the_post(); ?>
 
-            <tr class="cover">
+            <tr class="cover-info">
               <td>
                 <?php echo get_post_meta( get_the_ID(), 'artist', true); ?>
               </td>
               <td>
-                <?php the_title(); ?>
+                <strong><?php the_title(); ?></strong>
               </td>
               <td>
                 <?php 

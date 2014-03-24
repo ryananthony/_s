@@ -111,7 +111,9 @@ get_header(); ?>
                 
               <?php the_content(); ?>
               
-              <button href="<?php echo get_post_meta( get_the_ID(), 'fb_link', true); ?>">Click here to RSVP.</button>
+              <div class="show-rsvp">
+                <a class="button" href="<?php echo get_post_meta( get_the_ID(), 'fb_link', true); ?>">Click here to RSVP.</a>
+              </div>
 
             </article>
 

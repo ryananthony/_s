@@ -31,6 +31,30 @@ a:hover {
   transition: color 0.6s ease;
 }
 
+.button {
+  color: #ddd !important;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.button,
+button,
+input[type="submit"] {
+  background-color: #4E7529;
+  border: none;
+  font-size: 0.7em;
+  box-shadow: none;
+  color: #ddd;
+  text-shadow: 1px 0px 0px #010d0d;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  box-shadow: none;
+  background-color: #3c5c1d;
+}
+
 textarea,
 input[type="text"], 
 input[type="email"], 
@@ -43,25 +67,11 @@ input[type="search"] {
   border: none;
 }
 
-button,
-input[type="submit"] {
-  background-color: #4E7529;
-  border: none;
-  font-size: 0.7em;
-  box-shadow: none;
-  color: #ddd;
-  text-shadow: 1px 0px 0px #010d0d;
-}
-button:hover,
-input[type="submit"]:hover {
-  box-shadow: none;
-  background-color: #3c5c1d;
-}
-
 body {
   background: 
     url(/wp-content/themes/flannel_s/img/alley.png) center fixed no-repeat #040505;
 }
+
 
 /*  *********************************
     Modules contained separately so
@@ -298,9 +308,10 @@ body {
   margin-bottom: 40px;
 }
 
-.comment-body {
+.comment {
   padding: 40px;
   background: url(/wp-content/themes/flannel_s/img/trans-black.png);
+  margin-bottom: 20px;
 }
 
 
@@ -326,6 +337,15 @@ body {
   margin-top: 8px;
   margin: 0 auto;
   width: 90%;
+}
+
+.widget-area .search-form {
+  text-align: center;
+}
+
+.widget-area .search-submit {
+  font-size: 0.9em;
+  margin-top: 20px;
 }
 
 .widget {
@@ -385,6 +405,11 @@ body {
   display: inline-block;
 }
 
+.error-404 {
+  min-height: 900px;
+  background: url(/wp-content/themes/flannel_s/img/404.png) center bottom no-repeat #010d0d;
+}
+
 /* custom post types */
 
 .show-entry {
@@ -397,9 +422,21 @@ body {
   margin-bottom: 40px;
 }
 
-.show-entry button {
-  margin: 0 auto;
-  display: block;
+.show-rsvp {
+  text-align: center;
+}
+
+.covers-list {
+  font-size: 0.8em;
+}
+
+.covers-list th {
+  color: #ddd;
+}
+
+.cover-info td {
+  padding: 30px 0 10px;
+  border-top: 2px solid #fff;
 }
 
 /* other stuff */
@@ -529,6 +566,11 @@ body {
     -webkit-box-sizing: content-box; 
     -moz-box-sizing: content-box;    
     box-sizing: content-box; 
+  }
+
+  .error-404 {
+    background-image: url(/wp-content/themes/flannel_s/img/404-medium.png);
+    min-height: 600px;
   }
 
 }
