@@ -45,6 +45,60 @@ function _s_setup() {
 		'primary' => __( 'Primary Menu', '_s' ),
 	) );
 
+	add_action( 'init', 'create_post_type' );
+	function create_post_type() {
+		register_post_type( 'show',
+			array(
+				'labels' => array(
+					'name' => __( 'Shows' ),
+					'singular_name' => __( 'Show' ),
+					'add_new' => 'Add New Show',
+					'add_new_item' => 'Add New Show',
+					'edit_item' => 'Edit Show',
+					'new_item' => 'New Show',
+					'view_item' => 'View Show',
+					'search_items' => 'Search Shows',
+					'not_found' => 'No shows found',
+					'not_found_in_trash' => 'No shows found in Trash',
+				),
+				'public' => true,
+				'has_archive' => true,
+				'description' => 'Information about an artists performance',
+				'show_ui' => true,
+				'show_in_menu' => true,
+				'show_in_nav_menus' => true,
+				'menu_position' => 5,
+				'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+				'rewrite' => array( 'slug' => 'show','with_front' => false)
+			)
+		);
+		register_post_type( 'cover',
+			array(
+				'labels' => array(
+					'name' => __( 'Covers' ),
+					'singular_name' => __( 'Cover' ),
+					'add_new' => 'Add New Cover',
+					'add_new_item' => 'Add New Cover',
+					'edit_item' => 'Edit Cover',
+					'new_item' => 'New Cover',
+					'view_item' => 'View Cover',
+					'search_items' => 'Search Covers',
+					'not_found' => 'No covers found',
+					'not_found_in_trash' => 'No covers found in Trash',
+				),
+				'public' => true,
+				'has_archive' => true,
+				'description' => 'Information about an artists performance',
+				'show_ui' => true,
+				'show_in_menu' => true,
+				'show_in_nav_menus' => true,
+				'menu_position' => 6,
+				'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+				'rewrite' => array( 'slug' => 'cover','with_front' => false)
+			)
+		);
+	}
+
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 

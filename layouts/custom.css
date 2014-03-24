@@ -76,7 +76,9 @@ body {
 .site-main .post-navigation,
 .comments-area,
 .widget-area,
-.site-footer {
+.site-footer,
+.covers-list,
+.show-entry {
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -87,7 +89,7 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1.6em;
   color: #dbe8c1;
-  min-width: 400px;
+  min-width: 320px;
 }
 
 .header-wrap,
@@ -95,6 +97,11 @@ body {
 .content-wrap,
 .secondary-wrap {
   background-image: url(/wp-content/themes/flannel_s/img/teal-grunge.png);
+}
+
+.sandwich-wrap {
+  padding: 40px 20px;
+  background-color: #040505;
 }
 
 .header-wrap {
@@ -141,11 +148,11 @@ body {
   zoom: 1;
   filter: alpha(opacity=30);
   opacity: 0.3;
-  line-height: 300px;
+  width: 44%
 }
 
 .nav-img img {
-  display: block;
+  width: 100%;
 }
 
 .main-navigation {
@@ -155,62 +162,6 @@ body {
 .main-navigation .menu-item {
   padding-left: 10px;
   margin-top: 10px;
-}
-
-/*.main-navigation .menu-item a {
-  margin: 11px 0;
-}*/
-
-.main-navigation .menu-item:first-child {
-  padding-left: 0;
-}
-.main-navigation .menu-item-has-children {
-  margin-top: 0;
-}
-
-.main-navigation .menu-item-has-children > a,
-.main-navigation .menu-item-has-children > a:hover
- {
-  border: none;
-  border-radius: 0;
-  padding-top: 17px;
-  padding-bottom: 22px;
-  color: #ddd;
-}
-
-.main-navigation .menu-item-has-children ul > a {
-
-  position: relative;
-}
-
-.main-navigation .menu-item-has-children > a:before {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  margin-left: -6px;
-  width: 0; 
-  height: 0; 
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent; 
-  border-top: 8px solid #ddd; 
-}
-
-.main-navigation .menu-item-has-children ul {
-  background-color: #010d0d;
-  border-top: 10px solid #2a2e21;
-  box-shadow: 9px 6px 6px #020801;
-  top: 84px;
-}
-
-.main-navigation .menu-item-has-children ul a {
-  border-radius: 0;
-  font-size: 0.8em;
-}
-
-.main-navigation .menu-item-has-children ul a:hover {
-  color: #010d0d;
-  background-color: #b6c795;
 }
 
 .main-navigation a {
@@ -236,6 +187,60 @@ body {
   position: relative;
 }
 
+.main-navigation .menu-item:first-child {
+  padding-left: 0;
+}
+.main-navigation .menu-item-has-children {
+  margin-top: 0;
+}
+
+.main-navigation .menu-item-has-children > a,
+.main-navigation .menu-item-has-children > a:hover
+ {
+  border: none;
+  border-radius: 0;
+  padding-top: 17px;
+  padding-bottom: 22px;
+  color: #ddd;
+}
+
+.main-navigation .menu-item-has-children ul > a {
+  position: relative;
+}
+
+.main-navigation .menu-item-has-children > a:before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -6px;
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent; 
+  border-top: 8px solid #ddd; 
+}
+
+.main-navigation .menu-item-has-children ul {
+  background-color: #010d0d;
+  border-top: 10px solid #2a2e21;
+  box-shadow: 9px 6px 6px #020801;
+  top: 84px;
+}
+
+.main-navigation .menu-item-has-children ul li {
+  padding-left: 0;
+}
+
+.main-navigation .menu-item-has-children ul a {
+  border-radius: 0;
+  font-size: 0.8em;
+}
+
+.main-navigation .menu-item-has-children ul a:hover {
+  color: #010d0d;
+  background-color: #b6c795;
+}
 
 .content-wrap+.content-wrap,
 .secondary-wrap {
@@ -264,30 +269,40 @@ body {
 .entry-meta, .entry-footer {
   max-width: 500px;
   margin: 10px auto 0;
-  background-color: #040505;
 }
 
-.entry-content, .comments-area {
+.entry-content, 
+.comments-area, 
+.covers-list,
+.show-entry {
   padding: 40px 200px 20px;
   margin: 20px auto 0;
   border-radius: 0 0 10px 10px;
 }
 
-.entry-content {
+.entry-content,
+.covers-list,
+.show-entry {
   border-top: 10px solid #2a2e21;
   border-bottom: 20px solid #2a2e21;
   border-radius: 0 0 10px 10px;
   background: url(/wp-content/themes/flannel_s/img/bass-skate.png) right bottom no-repeat #010d0d;
 }
 
-.comments-area {
-  background-color: #040505;
-}
-
-
 .post-navigation {
   padding: 0 20px;
 }
+
+.comments-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.comment-body {
+  padding: 40px;
+  background: url(/wp-content/themes/flannel_s/img/trans-black.png);
+}
+
 
 .secondary-wrap {
   background: url(/wp-content/themes/flannel_s/img/buffalo-behind.png) center bottom no-repeat #010d0d;
@@ -317,7 +332,7 @@ body {
   float:left;
   width: 45%;
   margin-left: 10%;
-  padding: 10px;
+  padding: 20px;
   background: url(/wp-content/themes/flannel_s/img/trans-black.png);
   border-radius: 10px;
 }
@@ -335,7 +350,6 @@ body {
 }
 
 .widget li {
-
   position: relative;
 }
 
@@ -370,6 +384,36 @@ body {
 .site-info li {
   display: inline-block;
 }
+
+/* custom post types */
+
+.show-entry {
+  padding-bottom: 60px;
+}
+
+.show-entry h2 {
+  font-size: 2.0em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.show-entry button {
+  margin: 0 auto;
+  display: block;
+}
+
+/* other stuff */
+
+.addthis_toolbox {
+  width: 180px;
+  margin: 0 auto 20px;
+}
+
+.entry-footer .share-this {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
 
 /* tablet/phone breaking point */
 
@@ -449,7 +493,7 @@ body {
     text-align: left;
   }
 
-  .entry-content, .comments-area, .widget-area {
+  .entry-content, .comments-area, .widget-area, .covers-list, .show-entry {
     padding-left: 20px;
     padding-right: 20px;
   }
