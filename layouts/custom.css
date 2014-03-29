@@ -81,6 +81,7 @@ body {
 
 .site-header,
 .main-navigation,
+.site-main .paging-navigation,
 .entry-header,
 .entry-content,
 .site-main .post-navigation,
@@ -92,6 +93,7 @@ body {
   max-width: 1140px;
   margin: 0 auto;
 }
+
 
 /* sections */
 
@@ -427,16 +429,27 @@ body {
 }
 
 .covers-list {
-  font-size: 0.8em;
+  font-size: 0.7em;
+  margin-bottom: 70px;
+}
+
+.covers-list tr {
+  padding: 0 20px;
 }
 
 .covers-list th {
+  padding: 20px 10px;
   color: #ddd;
+  font-size: 1.5em;
 }
 
+.covers-list thead tr { background-color: #2A2E21;}
+.covers-list tbody tr:nth-child(even) { background: #111; }
+.covers-list tbody tr:nth-child(odd) { background: #222; }
+
 .cover-info td {
-  padding: 30px 0 10px;
-  border-top: 2px solid #fff;
+  padding: 20px 10px;
+  font-weight: bold;
 }
 
 /* other stuff */
@@ -464,6 +477,7 @@ body {
   .site-description {
     margin-bottom: 20px;
     text-align: center;
+    float: none;
   }
 
   .site-header img {

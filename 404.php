@@ -16,7 +16,7 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<div class="page-content">
-						<p><?php _e( 'Maybe you\'re too early for the show?', 'flannel_s' ); ?></p>
+						<p><?php _e( 'Hope you didn\'t miss the show...', 'flannel_s' ); ?></p>
 
 					</div><!-- .page-content -->
 				</section><!-- .error-404 -->				
