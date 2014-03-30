@@ -146,7 +146,7 @@ function flannel_s_scripts() {
 
 	wp_enqueue_script( 'flannel_s-tablesorter', get_template_directory_uri() . '/js/vendor/jquery.tablesorter.min.js', array(), '20140329', false );
 
-	wp_enqueue_script( 'flannel_s-custom-script', get_template_directory_uri() . '/js/custom.js', array(), '20140329', true );
+	wp_enqueue_script( 'flannel_s-custom-script', get_template_directory_uri() . '/js/custom.js', array(), '20140329', false );
 
 	wp_enqueue_script( 'flannel_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
