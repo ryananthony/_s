@@ -17,6 +17,7 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" type="image/x-icon" href="/wp-content/themes/flannel_s/img/favicon.ico" >
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <?php wp_head(); ?>
 </head>
 

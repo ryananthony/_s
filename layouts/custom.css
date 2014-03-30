@@ -104,6 +104,10 @@ body {
   min-width: 320px;
 }
 
+.site-main {
+  position: relative;
+}
+
 .header-wrap,
 .nav-wrap,
 .content-wrap,
@@ -429,8 +433,9 @@ body {
 }
 
 .covers-list {
-  font-size: 0.7em;
+  font-size: 0.5em;
   margin-bottom: 70px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .covers-list tr {
@@ -449,7 +454,83 @@ body {
 
 .cover-info td {
   padding: 20px 10px;
-  font-weight: bold;
+}
+
+.covers-list tbody .soundcloud td:first-child {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.covers-list .soundcloud-label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 1;
+  font-size: 9px;
+  color: #ddd;
+  line-height: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.covers-list tbody .soundcloud td:first-child:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 10px solid #f93218;
+  border-right: 10px solid transparent;
+  border-left: 90px solid #f93218;
+  z-index: 1;
+}
+
+.covers-list tbody .soundcloud:hover {
+  background-color: #f93218;
+  color: #ddd;
+  cursor:pointer;
+}
+
+.soundcloud-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(/wp-content/themes/flannel_s/img/teal-grunge.png);
+  height: 100%;
+  width: 100%;
+  z-index: 20 !important;
+}
+
+.soundcloud-embed {
+  position: fixed;
+  max-width: 1140px;
+  height: 166px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.soundcloud-embed > button {
+  max-height: 50px;
+  margin-top: 20px;
+  font-size: 1.4em;
+  background-color: #f93218;
+}
+
+.soundcloud-embed > button:hover {
+  background-color: #ff4b00;
+}
+
+.soundcloud-embed > p {
+  color: #ddd;
+  margin-top: 20px;
 }
 
 /* other stuff */
@@ -464,6 +545,14 @@ body {
   font-weight: bold;
 }
 
+.tablesorter th {
+  cursor: pointer;
+}
+
+.tablesorter th:hover {
+  color: #e4ebab;
+  transition: color 0.6s ease;
+}
 
 /* tablet/phone breaking point */
 
