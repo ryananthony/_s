@@ -464,9 +464,9 @@ body {
 
 .covers-list .soundcloud-label {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 10px;
-  z-index: 1;
+  z-index: 2;
   font-size: 9px;
   color: #ddd;
   line-height: 10px;
@@ -474,14 +474,14 @@ body {
   text-transform: uppercase;
 }
 
-.covers-list tbody .soundcloud td:first-child:before {
+.covers-list tbody .soundcloud td:first-child:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 10px solid #f93218;
+  border-top: 14px solid #f93218;
   border-right: 10px solid transparent;
-  border-left: 90px solid #f93218;
+  border-left: 110px solid #f93218;
   z-index: 1;
 }
 
@@ -556,7 +556,7 @@ body {
 
 /* tablet/phone breaking point */
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 1000px) { 
 
   body {
     background-image: url(/wp-content/themes/flannel_s/img/alley-medium.png);
@@ -674,6 +674,16 @@ body {
   .error-404 {
     background-image: url(/wp-content/themes/flannel_s/img/404-medium.png);
     min-height: 600px;
+  }
+
+.entry-content,
+.covers-list,
+.show-entry {
+  background-image: none;
+}
+
+  .cover-album {
+    display: none;
   }
 
 }
