@@ -491,6 +491,7 @@ body {
   background-color: #f93218;
   color: #ddd;
   cursor:pointer;
+  transition: background-color 0.6s ease;
 }
 
 .soundcloud-container {
