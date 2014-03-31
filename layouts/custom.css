@@ -456,6 +456,10 @@ body {
   padding: 20px 10px;
 }
 
+.cover-info td:first-child {
+  min-width: 92px;
+}
+
 .covers-list tbody .soundcloud td:first-child {
   display: inline-block;
   position: relative;
@@ -467,9 +471,7 @@ body {
   top: 2px;
   left: 10px;
   z-index: 2;
-  font-size: 9px;
   color: #ddd;
-  line-height: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
