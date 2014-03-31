@@ -30,10 +30,10 @@ get_header(); ?>
         <table id="covers-table" class="tablesorter">
           <thead>
             <tr>
-              <th>Artist</th>
-              <th>Song</th>
-              <th>Album</th>
-              <th>Year</th>
+              <th class="cover-artist">Artist</th>
+              <th class="cover-song">Song</th>
+              <th class="cover-year">Year</th>
+              <th class="cover-album">Album</th>
             </tr>
           </thead>
           <tbody>
@@ -49,13 +49,13 @@ get_header(); ?>
               <?php } else { ?>
                 <tr class="cover-info">
                 <?php } ?>
-                  <td>
-                    <?php if (!empty($soundcloud)) { ?> <span class="soundcloud-label">Soundcloud</span><?php } ?>
+                  <td class="cover-artist">
+                    <?php if (!empty($soundcloud)) { ?> <img class="soundcloud-label" src="/wp-content/themes/flannel_s/img/soundcloud.png"><?php } ?>
                     <?php 
                       echo get_post_meta( get_the_ID(), 'artist', true); 
                     ?>
                   </td>
-                  <td><?php 
+                  <td class="cover-song"><?php 
                     $link = (get_post_meta( get_the_ID(), 'info_link', true));
 
                   if(!empty($link)) {
@@ -65,19 +65,19 @@ get_header(); ?>
                   }
                     ?>
                   </td>
-                  <td>
-                    <?php 
-                      $album = get_post_meta( get_the_ID(), 'album', true); 
-                      if (!empty($album)) { 
-                        echo $album;
-                      }
-                    ?>
-                  </td>
-                  <td>
+                  <td class="cover-year">
                     <?php 
                       $record_year = get_post_meta( get_the_ID(), 'year', true); 
                       if (!empty($record_year)) { 
                         echo $record_year;
+                      }
+                    ?>
+                  </td>
+                  <td class="cover-album">
+                    <?php 
+                      $album = get_post_meta( get_the_ID(), 'album', true); 
+                      if (!empty($album)) { 
+                        echo $album;
                       }
                     ?>
                   </td>
