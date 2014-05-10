@@ -45,7 +45,7 @@ get_header(); ?>
 
               ?>
               <?php if (!empty($soundcloud)) { ?>
-                <tr class="cover-info soundcloud" id="<?php the_ID(); ?>">
+                <tr class="cover-info soundcloud" id="<?php the_ID(); ?>" data-cover-name="<?php echo $post->post_name; ?>">
               <?php } else { ?>
                 <tr class="cover-info">
                 <?php } ?>
@@ -101,5 +101,15 @@ get_header(); ?>
 
     </main><!-- #main -->
   </div><!-- #primary -->
+
+  <script>
+    window.onload = function() {
+      var cover_hash = window.location.hash.substring(1);
+      console.log(cover_hash);
+
+      $("[data-cover-name=" + cover_hash + "]").first().click();
+
+    }
+  </script>
 
 <?php get_footer(); ?>
