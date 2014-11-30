@@ -22,7 +22,7 @@ a {
   text-decoration: none;
 }
 
-a,a:visited {
+a,a:visited,a:focus {
   color: #b6c795;
 }
 
@@ -486,6 +486,11 @@ body {
   border-right: 10px solid transparent;
   border-left: 110px solid #f93218;
   z-index: 1;
+}
+
+.cover-details .button {
+  float: right;
+  margin-left: 10px;
 }
 
 .soundcloud-container {

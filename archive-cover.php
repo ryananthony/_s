@@ -37,61 +37,54 @@ get_header(); ?>
             </tr>
           </thead>
           <tbody>
-
             <?php 
-
               while ( have_posts() ) : the_post(); 
-              $soundcloud = get_post_meta( get_the_ID(), 'soundcloud', true); 
-
-              ?>
-              <?php if (!empty($soundcloud)) { ?>
-                <tr class="cover-info soundcloud" id="<?php the_ID(); ?>">
-              <?php } else { ?>
-                <tr class="cover-info">
+                $soundcloud = get_post_meta( get_the_ID(), 'soundcloud', true);
+                $spotify_link = (get_post_meta( get_the_ID(), 'spotify_link', true));
+                $album = get_post_meta( get_the_ID(), 'album', true);
+                $link = (get_post_meta( get_the_ID(), 'info_link', true));
+                $record_year = get_post_meta( get_the_ID(), 'year', true);
+                
+                if (!empty($soundcloud)) { ?>
+                  <tr class="cover-info soundcloud" id="<?php the_ID(); ?>">
+                <?php } else { ?>
+                  <tr class="cover-info">
                 <?php } ?>
-                  <td class="cover-artist">
-                    <?php if (!empty($soundcloud)) { ?> <img data-cover-name="<?php echo $post->post_name; ?>" class="soundcloud-label" src="/wp-content/themes/flannel_s/img/soundcloud.png"><?php } ?>
-                    <?php 
-                      echo get_post_meta( get_the_ID(), 'artist', true); 
-                    ?>
-                  </td>
-                  <td class="cover-song">
-                    <?php 
-                      echo "<a href=\"" . get_the_permalink() . "\">" . get_the_title() . "</a>";
-                    ?>
-                  </td>
-                  <td class="cover-details">
-                    <?php 
-                      $album = get_post_meta( get_the_ID(), 'album', true); 
+                    <td class="cover-artist">
+                      <?php if (!empty($soundcloud)) { ?> 
+                        <img data-cover-name="<?php echo $post->post_name; ?>" class="soundcloud-label" src="/wp-content/themes/flannel_s/img/soundcloud.png">
+                      <?php }  
+                      echo get_post_meta( get_the_ID(), 'artist', true); ?>
+                    </td>
+                    <td class="cover-song">
+                      <?php echo "<a href=\"" . get_the_permalink() . "\">" . get_the_title() . "</a>"; ?>
+                    </td>
+                    <td class="cover-details">
+                      <?php if(!empty($spotify_link)) {
+                        echo "<a class=\"button\" href=\"" . $spotify_link . "\">" . "Spotify" . "</a>";                       
+                      }
                       if (!empty($album)) { 
                         echo $album;
-                      }
-                    ?> - 
-                    [<?php 
-                      $record_year = get_post_meta( get_the_ID(), 'year', true); 
-                      if (!empty($record_year)) { 
+                      } ?> - 
+                    [<?php if (!empty($record_year)) { 
                         echo $record_year;
-                      }
-                    ?>]
-                    <?php
-                      $link = (get_post_meta( get_the_ID(), 'info_link', true));
-
-                      if(!empty($link)) {
+                      } ?>]
+                      <?php if(!empty($link)) {
                         echo "<a href=\"" . $link . "\">" . " - More info" . "</a>";                       
-                      }
-                    ?>
-                    <?php if (!empty($soundcloud)) { ?>
-                      <div class="soundcloud-container" data-cover-id="<?php the_ID(); ?>">
-                        <div class="soundcloud-embed">
-                          <?php echo $soundcloud;?>
-                          <button>Go Back</button>
-                          <p>Be sure to pause the player before pressing the &ldquo;Go Back&rdquo; button or music will continue to play in the background.</p>
+                      } 
+                      
+                      if (!empty($soundcloud)) { ?>
+                        <div class="soundcloud-container" data-cover-id="<?php the_ID(); ?>">
+                          <div class="soundcloud-embed">
+                            <?php echo $soundcloud;?>
+                            <button>Go Back</button>
+                            <p>Be sure to pause the player before pressing the &ldquo;Go Back&rdquo; button or music will continue to play in the background.</p>
+                          </div>
                         </div>
-                      </div>
-                    <?php } ?>
-                  </td>
-                </tr>
-            <?php endwhile; // end of the loop. ?>          
+                      <?php } ?>
+                    </td>
+                  </tr>
+              <?php endwhile; // end of the loop. ?>          
           </tbody>
         </table>
 
