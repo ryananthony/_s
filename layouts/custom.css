@@ -79,6 +79,10 @@ body {
     around the content.
   ********************************* */
 
+.image-link {
+  display: inline-block;
+}
+
 .site-header,
 .main-navigation,
 .site-main .paging-navigation,
@@ -432,6 +436,8 @@ body {
   text-align: center;
 }
 
+/* Covers Archive*/
+
 .covers-list {
   font-size: 0.5em;
   margin-bottom: 70px;
@@ -533,6 +539,22 @@ body {
 .soundcloud-embed > p {
   color: #ddd;
   margin-top: 20px;
+}
+
+/* Covers Main */
+
+.cover-info-box {
+  max-width: 320px;
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.cover-info-box ul {
+  margin-left: 0;
+}
+
+.cover-info-box li {
+  list-style: none;
 }
 
 /* other stuff */
@@ -678,13 +700,17 @@ body {
     min-height: 600px;
   }
 
-.entry-content,
-.covers-list,
-.show-entry {
-  background-image: none;
-}
+  .entry-content,
+  .covers-list,
+  .show-entry {
+    background-image: none;
+  }
 
   .cover-album {
+    display: none;
+  }
+
+  .cover-info-box {
     display: none;
   }
 

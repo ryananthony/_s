@@ -44,6 +44,7 @@ get_header(); ?>
                 $album = get_post_meta( get_the_ID(), 'album', true);
                 $link = (get_post_meta( get_the_ID(), 'info_link', true));
                 $record_year = get_post_meta( get_the_ID(), 'year', true);
+                $artist = get_post_meta( get_the_ID(), 'artist', true);
                 
                 if (!empty($soundcloud)) { ?>
                   <tr class="cover-info soundcloud" id="<?php the_ID(); ?>">
@@ -54,7 +55,7 @@ get_header(); ?>
                       <?php if (!empty($soundcloud)) { ?> 
                         <img data-cover-name="<?php echo $post->post_name; ?>" class="soundcloud-label" src="/wp-content/themes/flannel_s/img/soundcloud.png">
                       <?php }  
-                      echo get_post_meta( get_the_ID(), 'artist', true); ?>
+                      echo $artist; ?>
                     </td>
                     <td class="cover-song">
                       <?php echo "<a href=\"" . get_the_permalink() . "\">" . get_the_title() . "</a>"; ?>
